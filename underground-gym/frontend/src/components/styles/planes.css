@@ -1,0 +1,137 @@
+/* ==== PLANES ==== */
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.card-content ul li {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-content h3 {
+  color: #ff4c75;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  color: #d3d3d3;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+/* ==== SECCIÓN DE MEMBRESÍAS ==== */
+.membership-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.membership-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.membership-section p {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.membership-grid {
+  gap: 30px;
+}
+
+.membership-card {
+  background: linear-gradient(145deg, #121212, #1a1a1a);
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.membership-card:hover {
+  transform: scale(1.04);
+  border-color: #ff004c;
+  box-shadow: 0 0 25px rgba(255, 0, 76, 0.3);
+}
+
+.membership-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ff4c75;
+}
+
+.membership-card .desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.membership-card ul li {
+  text-align: left;
+  color: #ccc;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.membership-card .price {
+  margin: 20px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4c75;
+}
+
+.membership-card .price small {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.membership-card .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Colores distintivos */
+.membership-card.basic {
+  border-top: 4px solid #888;
+}
+
+.membership-card.intermediate {
+  border-top: 4px solid #ff004c;
+}
+
+.membership-card.pro {
+  border-top: 4px solid gold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    margin-bottom: 20px;
+  }
+}
