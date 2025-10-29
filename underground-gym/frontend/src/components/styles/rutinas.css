@@ -1,0 +1,140 @@
+/* ==== ESTILOS DEL FILTRO DE RUTINAS ==== */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-select:hover {
+  border-color: #ff4d6d;
+}
+
+/* ==== MEJORA VISUAL DE TARJETAS ==== */
+.card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  background: #111;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-content h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.text-small {
+  color: #ff4d6d;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ==== ESTILOS RESPONSIVE PARA UNDERGROUND GYM ==== */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .grid.grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid.grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .card-content p {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
