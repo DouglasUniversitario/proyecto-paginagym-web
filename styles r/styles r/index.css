@@ -1,0 +1,636 @@
+/* === UNDERGROUND GYM: DARK MODERN THEME === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #151515;
+  --accent: #e11d48;
+  --accent-glow: #ff416c;
+  --text: #f5f5f5;
+  --muted: #9ca3af;
+  --border: #262626;
+  --radius: 16px;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.4s ease;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+  box-shadow: 0 0 15px rgba(255, 56, 92, 0.4);
+}
+
+.logo-text h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.logo-text span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav ul li {
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+
+nav ul li:hover {
+  color: var(--accent);
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2)),
+    url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=2940&auto=format&fit=crop")
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  color: var(--text);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(255, 0, 72, 0.6);
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 1rem;
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 30, 70, 0.5);
+}
+
+.btn-primary:hover {
+  background: var(--accent-glow);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* === SECTIONS === */
+section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+section p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* === CARDS === */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  box-shadow: 0 0 10px rgba(255, 30, 70, 0);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 30, 70, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1.2rem;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+footer span {
+  color: var(--accent);
+}
+
+
+/* ==== ESTILOS DEL FILTRO DE RUTINAS ==== */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-select:hover {
+  border-color: #ff4d6d;
+}
+
+/* ==== MEJORA VISUAL DE TARJETAS ==== */
+.card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  background: #111;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-content h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.text-small {
+  color: #ff4d6d;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+/* ==== ESTILOS RESPONSIVE PARA UNDERGROUND GYM ==== */
+
+/* Pantallas medianas (tablets y laptops pequeñas) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .grid.grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid.grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+}
+
+/* Pantallas extra pequeñas */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .card-content p {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+
+/* ==== PLANES ==== */
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.card-content ul li {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-content h3 {
+  color: #ff4c75;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  color: #d3d3d3;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+/* ==== SECCIÓN DE MEMBRESÍAS ==== */
+.membership-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.membership-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.membership-section p {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.membership-grid {
+  gap: 30px;
+}
+
+.membership-card {
+  background: linear-gradient(145deg, #121212, #1a1a1a);
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.membership-card:hover {
+  transform: scale(1.04);
+  border-color: #ff004c;
+  box-shadow: 0 0 25px rgba(255, 0, 76, 0.3);
+}
+
+.membership-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ff4c75;
+}
+
+.membership-card .desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.membership-card ul li {
+  text-align: left;
+  color: #ccc;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.membership-card .price {
+  margin: 20px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4c75;
+}
+
+.membership-card .price small {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.membership-card .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Colores distintivos */
+.membership-card.basic {
+  border-top: 4px solid #888;
+}
+
+.membership-card.intermediate {
+  border-top: 4px solid #ff004c;
+}
+
+.membership-card.pro {
+  border-top: 4px solid gold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ==== PAGO ==== */
+.payment-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.payment-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 2px solid #ff004c;
+  border-radius: 20px;
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 0, 76, 0.3);
+}
+
+.payment-card h3 {
+  color: #ff4c75;
+  margin-bottom: 10px;
+}
+
+.payment-card .price {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #ffb2c4;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-form input {
+  background: #181818;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.payment-form input:focus {
+  outline: none;
+  border-color: #ff004c;
+}
+
+.payment-row {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+/* === FORMULARIOS OSCUROS === */
+input,
+textarea {
+  background-color: #151515;
+  color: #f5f5f5; /* texto claro visible */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af; /* gris tenue para placeholder */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e11d48; /* tu color rojo-acento */
+  box-shadow: 0 0 5px #e11d48;
+}
