@@ -1,0 +1,15 @@
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 span {
+  color: #e11d48;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
