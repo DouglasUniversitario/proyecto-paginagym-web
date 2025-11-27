@@ -1,0 +1,71 @@
+/* ===== BARRA DE NAVEGACION (HEADER) ===== */
+header {
+  position: sticky;     
+  top: 0;
+  z-index: 2000;        
+}
+
+/* Contenedor interno del nav */
+.navbar {
+  position: relative;   
+  z-index: 2001;        
+}
+
+/* === PERFIL BURBUJA === */
+.perfil-burbuja {
+  position: relative;
+  cursor: pointer;
+}
+
+.perfil-icono {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.perfil-mini {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ff004c;
+  object-fit: cover;
+  transition: 0.2s ease-in-out;
+}
+
+.perfil-mini:hover {
+  transform: scale(1.1);
+}
+
+.perfil-nombre {
+  font-weight: 600;
+  color: #fff;
+}
+
+.perfil-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #151515;
+  border-radius: 10px;
+  list-style: none;
+  box-shadow: 0 0 15px rgba(255, 0, 76, 0.2);
+  padding: 10px 0;
+  width: 160px;
+}
+
+.perfil-menu li {
+  padding: 10px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.perfil-menu li:hover {
+  background-color: #ff004c;
+  color: #fff;
+}
+
+.perfil-icono:hover .perfil-menu {
+  display: block;
+}

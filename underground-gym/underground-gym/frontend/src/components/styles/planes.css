@@ -1,0 +1,320 @@
+:root {
+  --color-bg-main: #050509;
+  --color-bg-card: #0b0b16;
+  --color-bg-card-soft: #101022;
+  --color-primary: #ff1368;
+  --color-primary-soft: rgba(255, 19, 104, 0.35);
+  --color-accent: #ffd23f;
+  --color-text: #f5f5f5;
+  --color-muted: #a3a3b5;
+  --color-border-soft: rgba(255, 255, 255, 0.06);
+}
+
+/* Pagina completa */
+.planes-page {
+  min-height: 100vh;
+  padding-bottom: 6rem;
+  background: radial-gradient(circle at top, #17172a 0, #050509 55%);
+  color: var(--color-text);
+}
+
+/* ---------- HERO ---------- */
+
+.planes-header {
+  padding: 4rem 8vw 3rem;
+  text-align: left;
+}
+
+.planes-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.planes-header h1 {
+  font-size: clamp(2.3rem, 3vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.planes-subtitle {
+  max-width: 720px;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+}
+
+/* ---------- SECCIONES ---------- */
+
+.planes-section {
+  padding: 0 8vw 3rem;
+}
+
+.planes-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.planes-section-subtitle {
+  color: var(--color-muted);
+  margin-bottom: 1.8rem;
+  max-width: 720px;
+}
+
+/* ---------- CARD PLAN ACTUAL ---------- */
+
+.planes-current-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  margin-top: 1.8rem;
+  padding: 2.2rem 2.4rem;
+  border-radius: 1.4rem;
+  background: radial-gradient(circle at top left, #29294a 0, #090915 45%, #050509 100%);
+  border: 1px solid rgba(255, 210, 63, 0.4);
+  box-shadow: 0 0 40px rgba(255, 19, 104, 0.25);
+}
+
+@media (max-width: 900px) {
+  .planes-current-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planes-current-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.planes-current-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.9rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  border-radius: 999px;
+  background: rgba(255, 210, 63, 0.13);
+  border: 1px solid rgba(255, 210, 63, 0.65);
+  color: #ffe797;
+}
+
+.planes-current-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.35rem 0 0;
+}
+
+.planes-current-resumen {
+  color: var(--color-muted);
+  max-width: 480px;
+}
+
+.planes-current-price {
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.planes-current-price span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 0.25rem;
+}
+
+.planes-current-status {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.planes-current-right {
+  background: radial-gradient(circle at top, rgba(255, 19, 104, 0.12), transparent 65%);
+  border-radius: 1.1rem;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid var(--color-border-soft);
+}
+
+.planes-current-list-title {
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.planes-current-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.planes-current-features li {
+  font-size: 0.93rem;
+  color: var(--color-muted);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.planes-current-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+}
+
+/* ---------- GRID DE PLANES ---------- */
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 1100px) {
+  .planes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .planes-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.planes-card {
+  border-radius: 1.4rem;
+  padding: 1.8rem 1.9rem 1.7rem;
+  background: linear-gradient(145deg, #090912, #101022);
+  border: 1px solid var(--color-border-soft);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.planes-card--middle {
+  border-color: rgba(255, 19, 104, 0.7);
+  box-shadow: 0 0 30px rgba(255, 19, 104, 0.3);
+}
+
+.planes-card--pro {
+  border-color: rgba(255, 210, 63, 0.7);
+  box-shadow: 0 0 35px rgba(255, 210, 63, 0.28);
+}
+
+.planes-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.planes-card-icon {
+  font-size: 1.6rem;
+}
+
+.planes-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.planes-card-chip {
+  align-self: flex-start;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+  background: rgba(255, 19, 104, 0.16);
+  color: #ffb6d1;
+  border: 1px solid rgba(255, 19, 104, 0.6);
+}
+
+.planes-card-chip--pro {
+  background: rgba(255, 210, 63, 0.16);
+  color: #ffe9a2;
+  border-color: rgba(255, 210, 63, 0.7);
+}
+
+.planes-card-resumen {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.planes-card-price {
+  font-size: 0.98rem;
+  color: var(--color-muted);
+}
+
+.planes-card-price span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 0.25rem;
+}
+
+.planes-card-price-sub {
+  font-size: 0.92rem;
+}
+
+.planes-card-features {
+  margin: 0.3rem 0 0.5rem;
+  padding-left: 1.1rem;
+  color: var(--color-muted);
+  font-size: 0.93rem;
+}
+
+.planes-card-features li + li {
+  margin-top: 0.25rem;
+}
+
+.planes-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+/* Botones */
+
+.planes-btn {
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.planes-btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.planes-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.planes-btn--primary {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(135deg, #ff1368, #ff6b3d);
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(255, 19, 104, 0.45);
+}
+
+.planes-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px rgba(255, 19, 104, 0.65);
+}

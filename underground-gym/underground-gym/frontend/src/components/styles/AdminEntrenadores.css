@@ -1,0 +1,364 @@
+:root {
+  --trainers-bg: #050509;
+  --trainers-surface: #070712;
+  --trainers-border: rgba(255, 255, 255, 0.08);
+  --trainers-text: #f5f5f5;
+  --trainers-muted: #9ca3af;
+  --trainers-primary: #ff1368;
+  --trainers-primary-soft: rgba(255, 19, 104, 0.35);
+}
+
+/* Página general */
+.trainers-page {
+  min-height: 100vh;
+  padding: 2.6rem 8vw 3.2rem;
+  background: radial-gradient(circle at top, #181827 0, #050509 55%);
+  color: var(--trainers-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* HEADER */
+.trainers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.trainers-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--trainers-primary);
+  margin-bottom: 0.5rem;
+}
+
+.trainers-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.45rem;
+  background: linear-gradient(90deg, #ffffff, #ffb3d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 22px rgba(255, 19, 104, 0.35);
+  letter-spacing: 0.02em;
+}
+
+.trainers-subtitle {
+  font-size: 0.95rem;
+  color: var(--trainers-muted);
+}
+
+/* Métricas */
+.trainers-metrics {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.trainers-metric-card {
+  min-width: 130px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(7, 7, 15, 0.95);
+  border: 1px solid var(--trainers-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.trainers-metric-card--green {
+  border-color: #22c55e;
+}
+
+.trainers-metric-card--yellow {
+  border-color: #facc15;
+}
+
+.trainers-metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--trainers-muted);
+}
+
+.trainers-metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* LAYOUT PRINCIPAL */
+.trainers-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.15fr);
+  gap: 1.8rem;
+  align-items: flex-start;
+}
+
+/* TARJETAS */
+.trainers-card {
+  background: radial-gradient(circle at top left, #181827, #050509);
+  border-radius: 22px;
+  padding: 1.3rem 1.4rem 1.5rem;
+  border: 1px solid var(--trainers-border);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+}
+
+.trainers-card--table {
+  padding-bottom: 1.1rem;
+}
+
+.trainers-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.trainers-card-header h2 {
+  font-size: 1.05rem;
+}
+
+.trainers-badge-count {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* TABLA */
+.trainers-table-wrapper {
+  margin-top: 0.2rem;
+  max-height: 420px;
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trainers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.trainers-table thead {
+  background: #0b1120;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.trainers-table th,
+.trainers-table td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  white-space: nowrap;
+}
+
+.trainers-table th {
+  text-align: left;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.trainers-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.trainers-table tbody tr:hover {
+  background: rgba(30, 64, 175, 0.35);
+}
+
+.trainers-empty {
+  text-align: center;
+  padding: 1.3rem 0.7rem;
+  color: var(--trainers-muted);
+}
+
+.trainers-col-acciones {
+  text-align: right;
+}
+
+/* Pills de estado */
+.trainers-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.trainers-status-pill--active {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+}
+
+.trainers-status-pill--inactive {
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc15;
+}
+
+/* Botones acciones */
+.trainers-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.trainers-btn-edit,
+.trainers-btn-delete {
+  border-radius: 999px;
+  border: none;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.trainers-btn-edit {
+  background: rgba(59, 130, 246, 0.18);
+  color: #bfdbfe;
+}
+
+.trainers-btn-edit:hover {
+  background: rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.trainers-btn-delete {
+  background: rgba(248, 113, 113, 0.18);
+  color: #fecaca;
+}
+
+.trainers-btn-delete:hover {
+  background: rgba(248, 113, 113, 0.35);
+  transform: translateY(-1px);
+}
+
+/* FORMULARIO */
+.trainers-card--form h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.trainers-form-subtitle {
+  font-size: 0.85rem;
+  color: var(--trainers-muted);
+  margin-bottom: 1rem;
+}
+
+.trainers-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.trainers-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+.trainers-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.trainers-form-field label {
+  font-size: 0.8rem;
+  color: #e5e7eb;
+}
+
+.trainers-form-field input,
+.trainers-form-field select {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: #020617;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.87rem;
+  color: var(--trainers-text);
+  outline: none;
+}
+
+.trainers-form-field input::placeholder {
+  color: rgba(148, 163, 184, 0.7);
+}
+
+.trainers-form-field input:focus,
+.trainers-form-field select:focus {
+  border-color: var(--trainers-primary);
+  box-shadow: 0 0 0 1px var(--trainers-primary-soft);
+}
+
+.trainers-form-actions {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+/* Botones principales */
+.trainers-btn-primary,
+.trainers-btn-secondary {
+  border-radius: 999px;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.trainers-btn-primary {
+  background: linear-gradient(90deg, #ff1368, #ff7b39);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(255, 19, 104, 0.7);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.trainers-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(255, 19, 104, 0.9);
+}
+
+.trainers-btn-secondary {
+  background: transparent;
+  color: var(--trainers-muted);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.trainers-btn-secondary:hover {
+  border-color: #e5e7eb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .trainers-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-page {
+    padding-inline: 1.5rem;
+  }
+
+  .trainers-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trainers-metrics {
+    flex-wrap: wrap;
+  }
+
+  .trainers-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

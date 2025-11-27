@@ -1,0 +1,279 @@
+:root {
+  --admin-bg: #050509;
+  --admin-card: #0b0c14;
+  --admin-card-soft: #111322;
+  --admin-border: rgba(255, 255, 255, 0.08);
+  --admin-muted: #b0b0b7;
+  --admin-primary: #ff1368;
+  --admin-primary-soft: rgba(255, 19, 104, 0.35);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.admin-planes-page {
+  min-height: 100vh;
+  padding: 3.5rem 8vw 4rem;
+  background: radial-gradient(circle at top, #17172a 0, #050509 50%, #000 100%);
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+.admin-planes-header {
+  max-width: 960px;
+  margin: 0 auto 2.4rem;
+}
+
+.admin-planes-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--admin-primary);
+  opacity: 0.85;
+  margin-bottom: 0.35rem;
+}
+
+.admin-planes-title {
+  font-size: 2.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.admin-planes-sub {
+  font-size: 0.9rem;
+  color: var(--admin-muted);
+}
+
+/* MÉTRICAS */
+.admin-planes-metrics {
+  max-width: 960px;
+  margin: 0 auto 2.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: flex-end;
+}
+
+.admin-planes-metric {
+  background: radial-gradient(circle at top, #17172a, var(--admin-card));
+  border-radius: 999px;
+  padding: 0.7rem 1.3rem;
+  border: 1px solid var(--admin-border);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8);
+  min-width: 170px;
+}
+
+.admin-planes-metric-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--admin-muted);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.admin-planes-metric-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* LAYOUT PRINCIPAL */
+.admin-planes-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* BOXES */
+.admin-planes-box {
+  background: radial-gradient(circle at top, #18182a, var(--admin-card-soft));
+  border-radius: 18px;
+  border: 1px solid var(--admin-border);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
+  padding: 1.5rem 1.7rem 1.6rem;
+}
+
+.admin-planes-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-planes-box-header h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.admin-planes-box-header p {
+  font-size: 0.85rem;
+  color: var(--admin-muted);
+}
+
+.admin-pill {
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--admin-border);
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.8rem;
+  color: var(--admin-muted);
+}
+
+/* TABLAS */
+.admin-planes-table-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: #050509;
+}
+
+.admin-planes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.admin-planes-table thead {
+  background: #0b0c16;
+}
+
+.admin-planes-table th,
+.admin-planes-table td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.admin-planes-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--admin-muted);
+}
+
+.admin-planes-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.admin-empty {
+  text-align: center;
+  color: var(--admin-muted);
+}
+
+/* FORMULARIO DE EDICIÓN */
+.admin-planes-form {
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-planes-form h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.admin-planes-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem 1.1rem;
+}
+
+.admin-planes-form-full {
+  grid-column: 1 / -1;
+}
+
+.admin-planes-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.86rem;
+}
+
+.admin-planes-form input,
+.admin-planes-form textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #050509;
+  color: #f5f5f5;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.admin-planes-form input:focus,
+.admin-planes-form textarea:focus {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 1px rgba(255, 19, 104, 0.4);
+}
+
+.admin-planes-save {
+  margin-top: 1rem;
+  border-radius: 999px;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff1368, #ff7b39);
+  color: #fff;
+  box-shadow: 0 10px 25px var(--admin-primary-soft);
+  transition: 0.18s ease transform, 0.18s ease box-shadow;
+}
+
+.admin-planes-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(255, 19, 104, 0.9);
+}
+
+/* ESTADOS */
+.estado-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.estado-pill--ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+
+.estado-pill--warn {
+  background: rgba(234, 179, 8, 0.18);
+  color: #facc15;
+}
+
+/* TEXTOS DE ESTADO */
+.admin-error {
+  color: #fb7185;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-muted {
+  color: var(--admin-muted);
+  font-size: 0.88rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .admin-planes-page {
+    padding-inline: 1.5rem;
+  }
+
+  .admin-planes-metrics {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-planes-box-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

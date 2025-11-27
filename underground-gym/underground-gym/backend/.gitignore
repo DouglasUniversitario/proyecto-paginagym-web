@@ -1,0 +1,16 @@
+# Node
+node_modules/
+.env
+package-lock.json
+
+# Logs
+logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
