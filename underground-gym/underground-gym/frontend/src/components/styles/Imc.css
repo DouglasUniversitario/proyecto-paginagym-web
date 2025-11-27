@@ -1,0 +1,79 @@
+.imc-page {
+  min-height: 100vh;
+  padding: 4rem 8vw;
+  background: radial-gradient(circle at top, #151523 0, #050509 55%);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imc-card {
+  max-width: 640px;
+  width: 100%;
+  background: rgba(5, 5, 20, 0.9);
+  border-radius: 24px;
+  padding: 2.5rem 2.8rem;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.25);
+}
+
+.imc-card h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.imc-card p {
+  color: #b0b0b7;
+  line-height: 1.5;
+}
+
+.imc-form {
+  margin-top: 1.5rem;
+}
+
+.imc-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.imc-row label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.imc-row input {
+  background: #050511;
+  border-radius: 999px;
+  border: 1px solid #26263a;
+  padding: 0.6rem 1rem;
+  color: #f5f5f5;
+}
+
+.imc-btn {
+  margin-top: 0.5rem;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #00f5a0, #00d9ff);
+  color: #050509;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.imc-result {
+  margin-top: 2rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: 18px;
+  background: rgba(10, 40, 40, 0.6);
+}
+
+.imc-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.imc-category {
+  margin-top: 0.3rem;
+  font-weight: 500;
+}

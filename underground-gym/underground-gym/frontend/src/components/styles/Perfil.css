@@ -1,0 +1,88 @@
+.perfil-bg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding-top: 120px;
+}
+
+.perfil-card {
+  background-color: #151515;
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(255, 0, 76, 0.3);
+  color: #fff;
+  text-align: center;
+}
+
+.perfil-card h2 {
+  color: #ff004c;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.foto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff004c;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 76, 0.4);
+}
+
+.subir-foto {
+  background-color: #ff004c;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.subir-foto:hover {
+  background-color: #ff3369;
+}
+
+.subir-foto input {
+  display: none;
+}
+
+.perfil-info {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.logout-btn {
+  background-color: #ff004c;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logout-btn:hover {
+  background-color: #ff1a66;
+  transform: translateY(-2px);
+}
